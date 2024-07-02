@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-repeat: no-repeat;
+}
+body.dark_mode {
+  background-image: linear-gradient(#141e30, #243b55);
+}
+body.light_mode {
+  background-image: linear-gradient(#c9d6ff, #e2e2e2);
+}
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  width: 100%;
+}
+.enter_game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  height: 100vh;
+}
+.toggle_mode {
+  text-align: end;
+  padding-top: 35px;
+}
+.mode {
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.enter_game__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.enter_game__body h1 {
+  font-size: 52px;
+  font-weight: 600;
+}
+.enter_game__btn {
+  display: flex;
+  gap: 50px;
+}
+.btn {
+  border: none;
+  padding: 10px 32px;
+  border-radius: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.dark_mode .btn {
+  color: #243b55;
+  background-image: linear-gradient(#c9d6ff, #e2e2e2);
+}
+.dark_mode .btn:hover {
+  color: #fff;
+  background-image: linear-gradient(#141e30, #243b55);
+}
+.light_mode .btn {
+  color: #fff;
+  background-image: linear-gradient(#141e30, #243b55);
+}
+.light_mode .btn:hover {
+  color: #243b55;
+  background-image: linear-gradient(#c9d6ff, #e2e2e2);
+}
+
+.play__game {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.hands {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.hands__img {
+  width: 350px;
+  height: 350px;
+}
+.playerShake {
+  animation: shake 0.9s;
+}
+.computerShake {
+  animation: shake 0.9s;
+}
+.winner {
+  display: flex;
+  flex-direction: column;
+}
+.winner p {
+  font-size: 32px;
+  text-align: center;
+}
+.dark_mode .winner p {
+  color: #fff;
+}
+.player_win,
+.computer_win,
+.tie {
+  display: none;
+}
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  gap: 15px;
+}
+.player_score::after {
+  content: "";
+  border: 1px solid;
+}
+.player_score,
+.computer_score {
+  display: flex;
+  text-align: center;
+  gap: 15px;
+  font-size: 24px;
+}
+.dark_mode .player_score,
+.dark_mode .computer_score {
+  color: #fff;
+}
+.light_mode .player_score,
+.light_mode .computer_score {
+  color: #243b55;
+}
+.play_game__btn {
+  display: flex;
+  justify-content: space-between;
+}
+.play_game__btn .btn {
+  font-size: 18px;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-30deg);
+  }
+
+  25% {
+    transform: rotate(30deg);
+  }
+
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+}

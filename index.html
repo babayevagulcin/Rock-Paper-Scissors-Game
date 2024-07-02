@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Rock, Paper & Scissors Game</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="toggle_mode">
+          <i class="fa-solid fa-circle-half-stroke mode"></i>
+        </div>
+      </div>
+    </header>
+    <section class="enter_game">
+      <div class="container">
+        <div class="enter_game__body">
+          <h1>Rock / Paper / Scissors</h1>
+          <div class="enter_game__btn">
+            <button id="playBtn" class="btn">Play Game</button>
+            <button id="cancelBtn" class="btn">Exit Game</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="play__game">
+      <div class="container">
+        <div class="hands">
+          <div class="hands__img">
+            <img src="./img/r.png" id="playerHand" alt="hand" />
+          </div>
+          <div class="winner">
+            <p class="player_win">You Win <i class="fa-solid fa-crown"></i></p>
+            <p class="computer_win">
+              Computer Win <i class="fa-solid fa-medal"></i>
+            </p>
+            <p class="tie">It's a tie!</p>
+          </div>
+          <div class="hands__img">
+            <img src="./img/rl.png" id="computerHand" alt="hand" />
+          </div>
+        </div>
+        <div class="score">
+          <div class="player_score">
+            <p>Player <span id="playerScore">0</span></p>
+          </div>
+
+          <div class="computer_score">
+            <p><span id="computerScore">0</span> Computer</p>
+          </div>
+        </div>
+        <div class="play_game__btn">
+          <button id="rock" class="btn">Rock</button>
+          <button id="paper" class="btn">Paper</button>
+          <button id="scissors" class="btn">Scissors</button>
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
